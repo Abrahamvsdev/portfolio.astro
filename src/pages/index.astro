@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import LinkedIn from '../Icons/LinkedIn.astro';
+import SocialPill from '../components/SocialPill.astro';
+import GitHubIcon from '../Icons/GitHub.astro';
+import MailIcon from '../Icons/Mail.astro';
+import Experience from '../components/Experience.astro';
+import Briefcase from '../Icons/Briefcase.astro';
+import Code from '../Icons/Code.astro';
+import Projects from '../components/Projects.astro';
+import AboutMe from '../Icons/AboutMe.astro';
+import AboutMeText from '../components/AboutMeText.astro';
+---
+
+<Layout title="Abrahamvsdev Portfolio">
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-20">
+
+		
+			<div class="flex flex-row items-center justify-center"><img class="rounded-full w-44 h-38" src="/src/Img/abraham_photo.jpg" alt="Abraham's photography" /></div>
+			<h1 class="text-white md:text-4xl text-2xl lg:text-5xl font-bold flex justify-center flex-row gap-x-4 pb-6 lg:pb-10 items-center ">
+				Hola! Soy Abraham <a href="https://www.linkedin.com/in/abrahamvsdev" target="_blank" rel="noopener"><div class="flex items-center pl-5"><Badge> Disponibilidad inmediata </Badge></div></a>
+			</h1>
+			<h2 class="text-xl lg:text-2xl max-w-[700px] text-center text-wrap"> <span>+1 año de experiencia en entorno académico.</span> 
+				<span class="opacity-80"><br>Desarrollador trainee en búsqueda activa de prácticas en formación DUAL. </span>
+				<span class="text-red-200/90"><br> De Barcelona, España 🇪🇸</span> </h2>
+			
+				<nav class="flex gap-4 mt-8 flex-wrap justify-center">
+					<SocialPill href="https://www.linkedin.com/in/abraham-vargas-silva-100b60319">
+						<LinkedIn class=" size-4 md:size-6" />
+						LinkedIn
+					</SocialPill>
+
+					<SocialPill href="https://github.com/Abrahamvsdev">
+						<GitHubIcon class=" size-4 md:size-6 " />
+						GitHub
+					</SocialPill>
+					<SocialPill href="https://github.com/Abrahamvsdev">
+						<MailIcon class=" size-4 md:size-6 " href="mailto:abrahamvsdev@gmail.com" />
+						Abrahamvsdev@gmail.com
+					</SocialPill>
+				</nav>
+		</SectionContainer>
+		<SectionContainer id="experiencia" >
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center ">
+				<Briefcase class="size-7" />
+				Experiencia
+			</h2>
+			<Experience />
+		</SectionContainer>
+		
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Code class="size-7" />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+		<SectionContainer id="sobre-mi">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<AboutMe class="size-7" />
+				Sobre mí
+			</h2>
+			<h3>
+				<AboutMeText />
+			</h3>
+		</SectionContainer>
+	</main>
+</Layout>
+
+

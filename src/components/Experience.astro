@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Desde Septiembre de 2023 - Actualidad",
+    title: "CFGS Desarrollo de aplicaciones web",
+    description:
+      "**En curso**. Segundo año de DAW. Adquiriendo conocimientos en lenguajes de programación como HTML5, CSS3, JavaScript, Java, PHP y MySQL. Estoy aprendiendo en mi tiempo libre frameworks como React, Angular, Astro y tecnologias como Docker y AWS y sus servicios básicos (EC2, S3, RDS).",
+    link: "#",
+  },
+  {
+    date: "2015 - 2022",
+    title: "Creador de contenido en Youtube y Twitch",
+    description:
+      "Creación y autogestión de contenido en plataformas de streaming. Planificación, grabación, edición y publicación de vídeos. Interacción con la audiencia a través de chats, comentarios y redes sociales. Diseño de gráficos y miniaturas.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-[14px]">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-32 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
